@@ -1,0 +1,87 @@
+@import url("keyframes.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: #5D2BE3;
+  color: #FFFFFF;
+}
+main {
+  font-size: 2em;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #381596;
+}
+h2 {
+  font-size: 1.5em;
+}
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em;
+}
+.icon {
+  max-width: 15em;
+  max-height: 15em;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+.icon:hover {
+  animation: iconanimation 2s;
+  cursor: pointer;
+  animation-fill-mode: forwards;
+}
+.icon img {
+  max-width: 100%;
+}
+.resultContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 5em;
+  margin-right: 5em;
+  text-align: center;
+}
+.vs p{
+  font-size: 2em;
+  font-weight: bold;
+  animation: vs 2s;
+  animation-iteration-count: infinite;
+}
+.resultados {
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+.restart button{
+  font-size: 1.5em;
+  background-color: yellow;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 5em;
+}
+.footer {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 1.5em;
+}
+.footer ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2em;
+}
+.footer li {
+  margin-right: 1em;
+}
+footer ul li a img {
+  max-height: 3em;
+}

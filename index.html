@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Piedra, papel o tijera</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1>¡Bienvenidos al juego de <em>piedra</em>, <em>papel</em> o <em>tijera</em>!</h1>
+      <h2 class="play">¿Jugamos?</h2>
+      <p>¡Elige tu opción!</p>
+      <div class="icon-container">
+        <div id="piedra" class="icon"><img src="./assets/piedra.png" alt="piedra"></div>
+        <div id="papel" class="icon"><img src="./assets/papel.png" alt="papel"></div>
+        <div id="tijera" class="icon"><img src="./assets/tijera.png" alt="tijera"></div>
+      </div>  
+    </div>
+    <div class="reultContainer">
+      <div class="resultContainer">
+        <div class="playerResult">
+          <input type="text" placeholder="Tu elección" name="player" class="resultados" readonly id="playerResult">
+        </div>
+        <div class="vs">
+          <p>VS</p>
+        </div>
+        <div class="cpuResult">
+          <input type="text" placeholder="La elección del CPU" name="cpu" class="resultados" readonly id="cpuResult">
+        </div>
+      </div>
+    </div>
+    <div class="restart">
+      <button value="restart" id="restart">Volver a Jugar</button>
+    </div>
+  </main>
+      <footer class="footer">
+        <ul>
+          <li>{D.P.}</li>
+          <li><a href="https://www.linkedin.com/in/diego-pagini-3b5401189/"><img src="./assets/linkedin.png" alt="linkedin"></a></li>
+          <li><a href="https://www.instagram.com/d.p_dev/?hl=es-la"><img src="./assets/instagram.png" alt="instagram"></a></li>
+        </ul>
+      </footer>
+  <script src="index.js"></script>
+</body>
+</html>

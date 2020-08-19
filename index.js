@@ -1,20 +1,19 @@
 let opcionUsuario;
-let opcionCPU;
 
 const piedra = document.getElementById("piedra").onclick = () => {
   opcionUsuario = piedra;
   document.getElementById("playerResult").value = "Piedra";
-  play(opcionCPU, opcionUsuario);
+  play(opcionUsuario);
 }
 const papel = document.getElementById("papel").onclick = () => {
   opcionUsuario = papel;
   document.getElementById("playerResult").value = "Papel";
-  play(opcionCPU, opcionUsuario);
+  play(opcionUsuario);
 }
 const tijera = document.getElementById("tijera").onclick = () => {
   opcionUsuario = tijera;
   document.getElementById("playerResult").value = "Tijera";
-  play(opcionCPU, opcionUsuario);
+  play(opcionUsuario);
 }
 
 const restart = document.getElementById("restart").onclick = () => {
@@ -22,7 +21,7 @@ const restart = document.getElementById("restart").onclick = () => {
 }
 
 function aleatorio() {
-    opcionCPU = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+    opcionCPU = Math.floor(Math.random() * 3);
     if(opcionCPU === 0) {
       document.getElementById("cpuResult").value = "Piedra";
     } else if(opcionCPU === 1) {
@@ -32,28 +31,35 @@ function aleatorio() {
     }
   }
 
-function play(opcionCPU, opcionUsuario){
+function play(opcionUsuario){
   aleatorio();
   if(opcionCPU === 0 && opcionUsuario === piedra) {
-    console.log("Empate");
+    document.getElementById("resultado").value = "Empate";
+    document.getElementById("resultado").style.backgroundColor = "yellow"; 
   } else if(opcionCPU === 0 && opcionUsuario === papel) {
-    console.log("Ganaste")
+    document.getElementById("resultado").value = "Ganaste";
+    document.getElementById("resultado").style.backgroundColor = "green"; 
   } else if(opcionCPU === 0 && opcionUsuario === tijera) {
-    console.log("Perdiste");
+    document.getElementById("resultado").value = "Perdiste";
+    document.getElementById("resultado").style.backgroundColor = "red"; 
   } else if(opcionCPU === 1 && opcionUsuario === piedra) {
-    console.log("Pediste");
+    document.getElementById("resultado").value = "Perdiste";
+    document.getElementById("resultado").style.backgroundColor = "red"; 
   } else if(opcionCPU === 1 && opcionUsuario === papel) {
-    console.log("empate");
+    document.getElementById("resultado").value = "Empate";
+    document.getElementById("resultado").style.backgroundColor = "yellow"; 
   } else if(opcionCPU === 1 && opcionUsuario === tijera) {
-    console.log("ganaste");
+    document.getElementById("resultado").value = "Ganaste";
+    document.getElementById("resultado").style.backgroundColor = "green"; 
   } else if(opcionCPU === 2 && opcionUsuario === piedra) {
-    console.log("ganaste") 
+    document.getElementById("resultado").value = "Ganaste";
+    document.getElementById("resultado").style.backgroundColor = "green"; 
   } else if(opcionCPU === 2 && opcionUsuario === papel) {
-    console.log("perdiste")
+    document.getElementById("resultado").value = "Perdiste";
+    document.getElementById("resultado").style.backgroundColor = "red"; 
   } else if(opcionCPU === 2 && opcionUsuario === tijera) {
-    console.log("empate");
+    document.getElementById("resultado").value = "Empate";
+    document.getElementById("resultado").style.backgroundColor = "yellow"; 
   }
   console.log(opcionCPU)
 }
-
-// Hola, tengo un problema al mostrar en .value del cpu el resultado. Lo trate de debuggear y el resultado lo esta tomando bien. No entiendo cual es el problema. Mil disculpas, soy novato. 

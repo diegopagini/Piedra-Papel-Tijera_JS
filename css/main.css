@@ -48,6 +48,10 @@ h2 {
   margin-right: 5em;
   text-align: center;
 }
+.resultContainer p {
+  font-size: 0.8em;
+  margin-top: -0.1em;
+}
 .vs p{
   font-size: 2em;
   font-weight: bold;
@@ -82,4 +86,18 @@ h2 {
 }
 footer ul li a img {
   max-height: 3em;
+}
+
+@media (max-width: 425px){
+  .resultContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .resultados{
+    width: 300px;
+  }
+  .resultado{
+    margin-top: 3em;
+  }
 }
